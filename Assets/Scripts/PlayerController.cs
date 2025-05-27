@@ -2,22 +2,31 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-  [SerializeField] private Rigidbody2D rb;
+  public static PlayerController Instance;
+
+  [SerializeField] private Rigidbody2D rigidBody;
   [SerializeField] private float moveSpeed;
   public Vector3 playerMoveDirection;
 
+  void Awake(){
+        if (Instance != null && Instance != this){
+            Destroy(this);
+        } else {
+            Instance = this;
+        }
+    }
+
+
   // Update is called once per frame
   void Update()
-  {
-    float inputX = Input.GetAxisRaw("Horizontal");
-    float inputY = Input.GetAxisRaw("Vertical");
-    playerMoveDirection = new Vector2(inputX, inputY).normalized;
-
-    rb.linearVelocity = new Vector2(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);
-  }
+    {
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float inputY = Input.GetAxisRaw("Vertical");
+        playerMoveDirection = new Vector3(inputX, inputY).normalized;
+    }
 
   void FixedUpdate()
   {
-    rb.linearVelocity = new Vector2(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);  
+    rigidBody.linearVelocity = new Vector2(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);  
   }
 }
