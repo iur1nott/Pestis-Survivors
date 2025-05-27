@@ -3048,7 +3048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1898758303}
   rigidBody: {fileID: 1898758307}
-  moveSpeed: 0
+  moveSpeed: 1
 --- !u!58 &1898758306
 CircleCollider2D:
   m_ObjectHideFlags: 0

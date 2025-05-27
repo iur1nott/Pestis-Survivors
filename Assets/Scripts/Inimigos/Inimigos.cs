@@ -6,7 +6,7 @@ public class Todos : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidBody;
     private Vector3 direção;
 
-    [SerializeField] private float moveSpeed = 1;
+    [SerializeField] private float moveSpeed;
 
     // Update is called once per frame
     void Update()
