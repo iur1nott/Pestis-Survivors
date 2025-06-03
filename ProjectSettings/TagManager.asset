@@ -44,5 +44,8 @@ TagManager:
   - name: coisas
     uniqueID: 2109847469
     locked: 0
+  - name: UI
+    uniqueID: 4099071027
+    locked: 0
   m_RenderingLayers:
   - Default
