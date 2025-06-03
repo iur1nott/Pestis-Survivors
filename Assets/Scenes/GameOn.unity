@@ -1051,6 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 1597082902}
+  animator: {fileID: 1597082899}
   moveSpeed: 3
   playerMoveDirection: {x: 0, y: 0, z: 0}
 --- !u!70 &1597082904
