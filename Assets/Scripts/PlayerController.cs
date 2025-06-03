@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
   public static PlayerController Instance;
 
   [SerializeField] private Rigidbody2D rigidBody;
+  [SerializeField] private Animator animator;
   [SerializeField] private float moveSpeed;
   public Vector3 playerMoveDirection;
 
@@ -16,14 +17,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-  // Update is called once per frame
   void Update()
+  {
+    float inputX = Input.GetAxisRaw("Horizontal");
+    float inputY = Input.GetAxisRaw("Vertical");
+    playerMoveDirection = new Vector3(inputX, inputY).normalized;
+
+    animator.SetFloat("moveX", inputX);
+    animator.SetFloat("moveY", inputY);
+
+    if (playerMoveDirection == Vector3.zero)
     {
-        float inputX = Input.GetAxisRaw("Horizontal");
-        float inputY = Input.GetAxisRaw("Vertical");
-        playerMoveDirection = new Vector3(inputX, inputY).normalized;
+      animator.SetBool("moving", false);
     }
+    else
+    {
+      animator.SetBool("moving", true);
+    }
+  }
 
   void FixedUpdate()
   {
