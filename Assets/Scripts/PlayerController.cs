@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
   public static PlayerController Instance;
@@ -9,15 +10,27 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float moveSpeed;
   public Vector3 playerMoveDirection;
 
-  void Awake(){
-        if (Instance != null && Instance != this){
-            Destroy(this);
-        } else {
-            Instance = this;
-        }
+  // Iuri- criei essas duas variaveis para usar na UI
+  public float playerMaxHealth;
+  public float playerHealth;
+
+
+  void Awake() {
+    if (Instance != null && Instance != this) {
+      Destroy(this);
+    } else {
+      Instance = this;
+    }
+  }
+
+    // Iuri- inicializando a health do inimigo parte 2:30
+
+    void Start()
+    {
+    playerHealth = playerMaxHealth;
     }
 
-  void Update()
+    void Update()
   {
     float inputX = Input.GetAxisRaw("Horizontal");
     float inputY = Input.GetAxisRaw("Vertical");
@@ -38,6 +51,20 @@ public class PlayerController : MonoBehaviour
 
   void FixedUpdate()
   {
-    rigidBody.linearVelocity = new Vector2(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);  
+    rigidBody.linearVelocity = new Vector2(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);
   }
-}
+
+
+  //Iuri- Criei essa funcao para a o dano e atualizar na UI -video 2:43:00
+
+  public void TakeDamage(float damage){
+      playerHealth -= damage;
+      UiController.Instance.UpdateHealthSlider();
+      if (playerHealth <= 0){
+        gameObject.SetActive(false);
+      }
+    }
+  }
+
+
+  
