@@ -19,4 +19,12 @@ public class Todos : MonoBehaviour
             rigidBody.linearVelocity = Vector2.zero;
         }
     }
+
+    // felipe -- lógica de colisão com player
+    void OnCollisionStay2D(Collision2D collision) {
+        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+        if (player != null) {
+            player.TakeDamage(1);
+        }
+    }
 }
