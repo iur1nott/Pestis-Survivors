@@ -23,11 +23,12 @@ public class PlayerController : MonoBehaviour
     }
   }
 
-    // Iuri- inicializando a health do inimigo parte 2:30
+  // Iuri- inicializando a health do inimigo parte 2:30
 
-    void Start()
-    {
+  void Start()
+  {
     playerHealth = playerMaxHealth;
+    UiController.Instance.UpdateHealthSlider();
     }
 
     void Update()
