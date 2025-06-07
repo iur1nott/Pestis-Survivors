@@ -61,8 +61,10 @@ public class PlayerController : MonoBehaviour
   public void TakeDamage(float damage){
       playerHealth -= damage;
       UiController.Instance.UpdateHealthSlider();
-      if (playerHealth <= 0){
-        gameObject.SetActive(false);
+    if (playerHealth <= 0)
+    {
+      gameObject.SetActive(false);
+      GameManager.Instance.GameOver();
       }
     }
   }
