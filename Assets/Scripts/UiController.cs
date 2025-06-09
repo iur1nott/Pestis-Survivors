@@ -11,8 +11,8 @@ public class UiController : MonoBehaviour
     [SerializeField] private Slider playerHealthSlider;
     [SerializeField] private TMP_Text healthText;
     public GameObject gameOverPanel;
-    
     public GameObject pausePanel;
+    [SerializeField] private TMP_Text timerText;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -32,5 +32,12 @@ public class UiController : MonoBehaviour
         healthText.text = playerHealthSlider.value + " / " +
         playerHealthSlider.maxValue;
 
-    } 
+    }
+
+    public void UpdateTimer(float timer)
+    {
+        float min = Mathf.FloorToInt(timer / 60f);
+        float sec = Mathf.FloorToInt(timer % 60f);
+        timerText.text = min + ":" + sec.ToString("00");
+    }
 }
