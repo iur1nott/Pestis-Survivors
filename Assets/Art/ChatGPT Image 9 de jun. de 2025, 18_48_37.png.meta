@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa12281b9ee08354b9976f5f89d49132
+guid: 8707c057a2ff172458669d78c1cc0401
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3211468151625907132
-    second: ChatGPT Image 8 de jun. de 2025, 14_27_34_0
+      213: 9065563213174720398
+    second: ChatGPT Image 9 de jun. de 2025, 18_48_37_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image 8 de jun. de 2025, 14_27_34_0
+      name: ChatGPT Image 9 de jun. de 2025, 18_48_37_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4448bde2bb29e63d0800000000000000
-      internalID: -3211468151625907132
+      spriteID: e87c02206b95fcd70800000000000000
+      internalID: 9065563213174720398
       vertices: []
       indices: 
       edges: []
