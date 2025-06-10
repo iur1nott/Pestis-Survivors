@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
   void FixedUpdate()
   {
-    rigidBody.linearVelocity = new Vector2(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);
+    rigidBody.linearVelocity = new Vector3(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);
   }
 
   public void TakeDamage(float damage)

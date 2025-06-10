@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Todos : MonoBehaviour
+public class Inimigos : MonoBehaviour
 {
   [SerializeField] private SpriteRenderer spriteRenderer;
   [SerializeField] private Rigidbody2D rigidBody;
@@ -8,6 +8,7 @@ public class Todos : MonoBehaviour
 
   [SerializeField] private float moveSpeed;
   [SerializeField] private float damage;
+  [SerializeField] private float health;
 
   // Update is called once per frame
   void Update()
@@ -29,6 +30,14 @@ public class Todos : MonoBehaviour
     if (collision.gameObject.CompareTag("Player"))
     {
       PlayerController.Instance.TakeDamage(damage);
+    }
+  }
+
+  public void TakeDamage(float damage)
+  {
+    health -= damage;
+    if (health <= 0)
+    {
       Destroy(gameObject);
     }
   }
