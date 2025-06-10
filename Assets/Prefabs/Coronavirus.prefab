@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7837134355867619457}
   - component: {fileID: 7350142706397409474}
   m_Layer: 3
-  m_Name: coronavirus
+  m_Name: Coronavirus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

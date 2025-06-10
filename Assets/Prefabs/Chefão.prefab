@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4245246727855260048}
   - component: {fileID: 3056864051912680068}
   m_Layer: 3
-  m_Name: "Chef\xE3o_0"
+  m_Name: "Chef\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
