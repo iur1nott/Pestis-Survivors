@@ -129,7 +129,7 @@ MonoBehaviour:
   rigidBody: {fileID: 2717447967801857905}
   moveSpeed: 1
   damage: 10
-  health: 70
+  health: 80
 --- !u!50 &2717447967801857905
 Rigidbody2D:
   serializedVersion: 5

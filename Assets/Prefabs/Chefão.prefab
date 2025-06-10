@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3056864051912680068}
   m_Layer: 3
   m_Name: "Chef\xE3o"
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2109847469
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -230593158490454905, guid: 65ec308f7c6b12b9ca389ad055b28f42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,6 +172,7 @@ MonoBehaviour:
   rigidBody: {fileID: 4264578845939363842}
   moveSpeed: 1
   damage: 10
+  health: 100
 --- !u!114 &2867358661975032340
 MonoBehaviour:
   m_ObjectHideFlags: 0

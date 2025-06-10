@@ -106,7 +106,7 @@ MonoBehaviour:
   rigidBody: {fileID: 8749185436877210069}
   moveSpeed: 2
   damage: 10
-  health: 60
+  health: 50
 --- !u!58 &746026657203755345
 CircleCollider2D:
   m_ObjectHideFlags: 0

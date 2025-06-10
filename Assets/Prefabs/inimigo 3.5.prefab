@@ -169,4 +169,4 @@ MonoBehaviour:
   rigidBody: {fileID: 1088131742941778985}
   moveSpeed: 0.8
   damage: 10
-  health: 70
+  health: 90
