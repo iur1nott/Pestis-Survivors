@@ -168,5 +168,5 @@ MonoBehaviour:
   spriteRenderer: {fileID: 6747694061894316372}
   rigidBody: {fileID: 1088131742941778985}
   moveSpeed: 0.8
-  damage: 10
+  damage: 5
   health: 90

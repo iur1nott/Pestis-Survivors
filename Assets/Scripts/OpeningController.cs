@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class OpeningController : MonoBehaviour
 {
     public GameObject[] slides;
-    public float slideDuration = 4f; // tempo por slide, em segundos
+    public float slideDuration = 4f; 
 
     private int currentIndex = 0;
     private float timer = 0f;

@@ -10,12 +10,12 @@ public class Inimigos : MonoBehaviour
   [SerializeField] private float damage;
   [SerializeField] private float health;
 
-  // Update is called once per frame
+  
   void Update()
   {
     if (PlayerController.Instance.gameObject.activeSelf)
     {
-      // se movimenta em direção ao player
+      
       direção = (PlayerController.Instance.transform.position - transform.position).normalized;
       rigidBody.linearVelocity = new Vector2(direção.x * moveSpeed, direção.y * moveSpeed);
     }

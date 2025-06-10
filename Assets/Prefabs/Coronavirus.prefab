@@ -133,7 +133,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4089236168788598434}
   rigidBody: {fileID: 3135588094176440266}
   moveSpeed: 1.5
-  damage: 10
+  damage: 2
   health: 60
 --- !u!58 &7837134355867619457
 CircleCollider2D:

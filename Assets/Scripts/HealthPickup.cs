@@ -13,7 +13,7 @@ public class HealthPickup : MonoBehaviour
             {
                 player.playerHealth = Mathf.Min(player.playerHealth + healAmount, player.playerMaxHealth);
 
-                // Atualiza a UI logo após curar
+               
                 UiController.Instance.UpdateHealthSlider();
 
                 Destroy(gameObject);
