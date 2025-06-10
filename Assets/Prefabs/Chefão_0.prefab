@@ -170,6 +170,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2351189017738848587}
   rigidBody: {fileID: 4264578845939363842}
   moveSpeed: 1
+  damage: 10
 --- !u!114 &2867358661975032340
 MonoBehaviour:
   m_ObjectHideFlags: 0
