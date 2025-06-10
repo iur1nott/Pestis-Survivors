@@ -92022,6 +92022,11 @@ MonoBehaviour:
     spawnInterval: 2
     enemiesPerWave: 10
     spawnedEnemyCount: 0
+  - enemyPrefab: {fileID: 3976482454826559707, guid: d25503e1ba6e5124ebaa10d89072bcc3, type: 3}
+    spawnTimer: 0
+    spawnInterval: 2
+    enemiesPerWave: 1
+    spawnedEnemyCount: 0
   waveNumber: 0
   minPos: {fileID: 1162669895}
   maxPos: {fileID: 1626288743}
