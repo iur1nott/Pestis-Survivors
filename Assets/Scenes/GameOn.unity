@@ -88959,7 +88959,7 @@ TilemapCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -93249,6 +93249,8 @@ MonoBehaviour:
   playerMoveDirection: {x: 0, y: 0, z: 0}
   playerMaxHealth: 100
   playerHealth: 0
+  immunityDuration: 0
+  immunityTimer: 0
 --- !u!70 &1597082904
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
