@@ -9,11 +9,12 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private Animator animator;
   [SerializeField] private float moveSpeed;
   public Vector3 playerMoveDirection;
-
-  // Iuri- criei essas duas variaveis para usar na UI
   public float playerMaxHealth;
   public float playerHealth;
 
+  private bool isImmune;
+  [SerializeField] private float immunityDuration;
+  [SerializeField] private float immunityTimer;
 
   void Awake() {
     if (Instance != null && Instance != this) {
@@ -23,15 +24,13 @@ public class PlayerController : MonoBehaviour
     }
   }
 
-  // Iuri- inicializando a health do inimigo parte 2:30
-
   void Start()
   {
     playerHealth = playerMaxHealth;
     UiController.Instance.UpdateHealthSlider();
     }
 
-    void Update()
+  void Update()
   {
     float inputX = Input.GetAxisRaw("Horizontal");
     float inputY = Input.GetAxisRaw("Vertical");
@@ -48,6 +47,15 @@ public class PlayerController : MonoBehaviour
     {
       animator.SetBool("moving", true);
     }
+
+    if (immunityTimer > 0)
+    {
+      immunityTimer -= Time.deltaTime;
+    }
+    else
+    {
+      isImmune = false;
+    }
   }
 
   void FixedUpdate()
@@ -55,19 +63,22 @@ public class PlayerController : MonoBehaviour
     rigidBody.linearVelocity = new Vector2(playerMoveDirection.x * moveSpeed, playerMoveDirection.y * moveSpeed);
   }
 
-
-  //Iuri- Criei essa funcao para a o dano e atualizar na UI -video 2:43:00
-
-  public void TakeDamage(float damage){
+  public void TakeDamage(float damage)
+  {
+    if (!isImmune)
+    {
+      isImmune = true;
+      immunityTimer = immunityDuration;
       playerHealth -= damage;
       UiController.Instance.UpdateHealthSlider();
-    if (playerHealth <= 0)
-    {
-      gameObject.SetActive(false);
-      GameManager.Instance.GameOver();
+      if (playerHealth <= 0)
+      {
+        gameObject.SetActive(false);
+        GameManager.Instance.GameOver();
       }
     }
   }
+}
 
 
   

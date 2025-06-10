@@ -24,7 +24,6 @@ public class Todos : MonoBehaviour
     }
   }
 
-  // felipe -- lógica de colisão com player
   void OnCollisionStay2D(Collision2D collision)
   {
     if (collision.gameObject.CompareTag("Player"))
