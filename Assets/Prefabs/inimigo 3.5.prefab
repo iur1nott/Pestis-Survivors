@@ -167,4 +167,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6747694061894316372}
   rigidBody: {fileID: 1088131742941778985}
-  moveSpeed: 1
+  moveSpeed: 0.8

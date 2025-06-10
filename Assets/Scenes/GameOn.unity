@@ -92043,12 +92043,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 5155917815651552593, guid: ec98db0a26f31f441869b9f0c6d0e30a, type: 3}
     spawnTimer: 0
     spawnInterval: 2
-    enemiesPerWave: 10
-    spawnedEnemyCount: 0
-  - enemyPrefab: {fileID: 5155917815651552593, guid: ec98db0a26f31f441869b9f0c6d0e30a, type: 3}
-    spawnTimer: 0
-    spawnInterval: 2
-    enemiesPerWave: 10
+    enemiesPerWave: 15
     spawnedEnemyCount: 0
   waveNumber: 0
   minPos: {fileID: 1162669895}
@@ -94022,14 +94017,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemyPrefab: {fileID: 6489180855495543270, guid: a81932dd6383041488baed56a29eb910, type: 3}
-    spawnTimer: 0
-    spawnInterval: 2
-    enemiesPerWave: 10
-    spawnedEnemyCount: 0
-  - enemyPrefab: {fileID: 5155917815651552593, guid: ec98db0a26f31f441869b9f0c6d0e30a, type: 3}
-    spawnTimer: 0
-    spawnInterval: 2
-    enemiesPerWave: 10
+    spawnTimer: 40
+    spawnInterval: 10
+    enemiesPerWave: 15
     spawnedEnemyCount: 0
   waveNumber: 0
   minPos: {fileID: 17704373}
@@ -94230,14 +94220,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemyPrefab: {fileID: 1517777420597095933, guid: 242c18bce6213074085c8235974d5bc4, type: 3}
-    spawnTimer: 0
-    spawnInterval: 2
-    enemiesPerWave: 10
-    spawnedEnemyCount: 0
-  - enemyPrefab: {fileID: 5155917815651552593, guid: ec98db0a26f31f441869b9f0c6d0e30a, type: 3}
-    spawnTimer: 0
-    spawnInterval: 2
-    enemiesPerWave: 10
+    spawnTimer: 30
+    spawnInterval: 10
+    enemiesPerWave: 18
     spawnedEnemyCount: 0
   waveNumber: 0
   minPos: {fileID: 1780537211}
